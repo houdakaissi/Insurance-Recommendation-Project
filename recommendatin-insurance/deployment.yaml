@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommendation-deployment
+spec:
+  selector:
+    matchLabels:
+      app: recommendation
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: recommendation
+    spec:
+      containers:
+        - name: recommendation
+          image: elmachkouriimane/recommendation:latest
+          ports:
+            - containerPort: 8082
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: recommendation
+  name: recommendation-svc
+spec:
+  selector:
+    app: recommendation
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 8082
+      targetPort: 8082
+status:
+  loadBalancer: {}
