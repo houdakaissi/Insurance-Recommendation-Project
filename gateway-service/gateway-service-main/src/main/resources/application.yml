@@ -1,0 +1,51 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: auth
+          uri: http://authregister-svc:8083
+          predicates:
+            - Path=/**
+          filters:
+            - PrefixPath=/api
+            - AddResponseHeader=X-Powered-By, DanSON Gateway Service
+
+
+        - id: contract
+          uri: http://addcontracy-showlist-svc:8084
+          predicates:
+            - Path=/**
+          filters:
+            - PrefixPath=/api
+            - AddResponseHeader=X-Powered-By, DanSON Gateway Service
+
+
+        - id: complains
+          uri: http://complains-svc:8085
+          predicates:
+            - Path=/**
+          filters:
+            - PrefixPath=/api
+            - AddResponseHeader=X-Powered-By, DanSON Gateway Service
+
+
+        - id: recommendation
+          uri: http://recommendation-svc:8082
+          predicates:
+            - Path=/**
+          filters:
+            - AddResponseHeader=X-Powered-By, DanSON Gateway Service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    gateway:
+      enabled: true
+
+server:
+  port: 8080
