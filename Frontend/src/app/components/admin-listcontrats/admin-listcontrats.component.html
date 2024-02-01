@@ -1,0 +1,67 @@
+<div class="nav-items"  >
+  <div class="nav-item"  routerLink="/admin">
+    <mat-icon>stop</mat-icon>
+   
+    <span>Main page</span>
+    
+  </div>
+  <div class="nav-item"  routerLink="/admin_listcontrats">
+    <mat-icon>dashboard</mat-icon>
+   
+    <span>List Contracts</span>
+    
+  </div>
+  <div class="nav-item" routerLink="/admin_addcontrats">
+    <mat-icon>inbox</mat-icon>
+    <span>Add Contracts</span>
+  </div>
+  <div class="nav-item" routerLink="/admin_listcomplains">
+    <mat-icon>attach_money</mat-icon>
+    <span>List Complains</span>
+  </div>
+
+  
+</div>
+
+
+
+
+
+
+
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Cost assurance</th>
+        <th>Date d'assurance</th>
+        <th>Type</th>
+        <th>buyer username</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let user of myContratDetails">
+        <ng-container *ngIf="user.seller?.username === receivedData">
+          <tr>
+            <td>{{ user.cost }}</td>
+            <td>{{ user.date }}</td>
+            <ng-container *ngIf="user.hasCar; ">
+              <td>Car</td>
+          </ng-container>
+          
+          <ng-container *ngIf="user.hasTravel; ">
+              <td>Travel</td>
+          </ng-container>
+          
+          <ng-container *ngIf="user.hasStage; ">
+              <td>Stage</td>
+          </ng-container>
+
+            <td>{{ user.buyer?.username }}</td>
+          </tr>
+        </ng-container>
+      </ng-container>
+      
+    </tbody>
+  </table>
+</div>

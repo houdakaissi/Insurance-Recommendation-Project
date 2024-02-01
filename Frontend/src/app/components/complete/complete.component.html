@@ -1,0 +1,155 @@
+<h2>search insurance</h2>
+
+<form [formGroup]="completeProfileForm" (ngSubmit)="submitCompleteProfileForm()">
+  <!-- Add additional profile fields here -->
+  <label for="wallet">Additional Information:</label>
+  <input type="text" id="additionalInfo" name="wallet" formControlName="wallet" required>
+
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Information Form</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+  /////
+ 
+ <!-- Include Bootstrap CSS in your project -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy2iFUEKfkgiWHAahfA5vA1/5/dJ53me" crossorigin="anonymous">
+
+<!-- Your Angular HTML template with Bootstrap classes -->
+<form action="#" method="post" id="carForm" class="mt-3">
+  <div class="form-group">
+    <label for="hasCar">Do you have a car?</label>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="hasCar" value="yes" id="yesCar" (change)="onHasCarChange($event)">
+      <label class="form-check-label" for="yesCar">Yes</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="hasCar" value="no" id="noCar" (change)="onHasCarChange($event)">
+      <label class="form-check-label" for="noCar">No</label>
+    </div>
+  </div>
+  
+  <div *ngIf="showCarDetails" class="mt-3">
+    <div class="form-group">
+      <label for="duration">Miliage</label>
+      <input type="text" class="form-control" name="duration" id="duration">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="text" class="form-control" name="age" id="age">
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="form-group">
+    <label for="hasCar">Do you have a stage?</label>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="hasCar" value="yes" id="yesCar" (change)="onHasCarChange($event)">
+      <label class="form-check-label" for="yesCar">Yes</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="hasCar" value="no" id="noCar" (change)="onHasCarChange($event)">
+      <label class="form-check-label" for="noCar">No</label>
+    </div>
+  </div>
+  
+  <div *ngIf="showCarDetails" class="mt-3">
+    <div class="form-group">
+      <label for="duration">Duration</label>
+      <input type="text" class="form-control" name="duration" id="duration">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Start Franchise:</label>
+      <input type="text" class="form-control" name="age" id="age">
+    </div>
+    <div class="form-group">
+      <label for="age">End Franchise:</label>
+      <input type="text" class="form-control" name="age" id="age">
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+  <div class="form-group">
+    <label for="hasCar">Do you want to travel?</label>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="hasCar" value="yes" id="yesCar" (change)="onHasCarChange($event)">
+      <label class="form-check-label" for="yesCar">Yes</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="hasCar" value="no" id="noCar" (change)="onHasCarChange($event)">
+      <label class="form-check-label" for="noCar">No</label>
+    </div>
+  </div>
+  
+  <div *ngIf="showCarDetails" class="mt-3">
+    <div class="form-group">
+      <label for="duration">Start Franchise:</label>
+      <input type="text" class="form-control" name="duration" id="duration">
+    </div>
+
+    <div class="form-group">
+      <label for="age">End Franchise</label>
+      <input type="text" class="form-control" name="age" id="age">
+    </div>
+    <div class="form-group">
+      <label for="age">Duration</label>
+      <input type="text" class="form-control" name="age" id="age">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Destination</label>
+      <input type="text" class="form-control" name="age" id="age">
+    </div>
+
+  </div>
+  <button type="submit" class="btn btn-primary mt-3">Submit</button>
+</form>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+///////////////
+
+
+
+
+     

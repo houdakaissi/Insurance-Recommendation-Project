@@ -1,0 +1,30 @@
+ 
+<div class="container mt-4" >
+  <div class="card">
+      <h1>Add reclamation</h1>
+<form>
+  <div class="form-group">
+   
+    <label>Date</label>
+
+    <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control" id="name" placeholder="Enter Name">
+
+  </div>
+
+  <div class="form-group">
+      <label>Description</label>
+      <input type="text" [(ngModel)]="address" [ngModelOptions]="{standalone: true}" class="form-control" id="address" placeholder="Enter address">
+
+    </div>
+
+    <div class="form-group">
+      <label>email</label>
+      <input type="text" [(ngModel)]="mobile" [ngModelOptions]="{standalone: true}" class="form-control" id="mobile" placeholder="Enter Mobile">
+
+    </div>
+ 
+
+  <button type="submit" class="btn btn-primary mt-4" (click)="save()" >Submit</button>
+</form>
+</div>
+<div>

@@ -1,0 +1,265 @@
+.main-container {
+    display: flex;
+    .side-nav {
+      width: 10px;
+      display: flex;
+      left:0px;
+  flex-direction: column;
+       position:absolute;
+       right:1400px;
+      
+      min-width: 130px;
+      min-height: calc(100vh - 70px);
+      background-color: #113c60;
+      color: #fff;
+      box-shadow: 5px 5px 5px #939393;
+      @media only screen and (max-width: 1300px) {
+        width: 200px;
+        min-width: 100px;
+        
+      }
+    }
+    .main {
+      padding: 30px;
+    }
+  }
+
+  .nav-items {
+    padding-top: 40px;
+    .nav-item {
+      padding: 25px 50px;
+      cursor: pointer;
+      @media only screen and (max-width: 1300px) {
+        padding: 25px 40px;
+      }
+      &:hover {
+        background-color: rgb(1, 38, 69);
+      }
+      fa-icon {
+        margin-right: 20px;
+        font-size: 22px;
+      }
+      span {
+        display: inline;
+        @media only screen and (max-width: 1300px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .top-section {
+    
+    @media only screen and (max-width: 1600px) {
+      width: 1280px;
+    }
+    @media only screen and (max-width: 1500px) {
+      width: 1180px;
+    }
+    @media only screen and (max-width: 1400px) {
+      width: 1080px;
+    }
+    @media only screen and (max-width: 1200px) {
+      width: 980px;
+    }
+  }
+  .middle-section {
+    display:flex;
+    position:absolute;
+    justify-content: space-between;
+    margin-top:300px;
+    left:200px;
+    
+    @media only screen and (max-width: 1600px) {
+      width: 1280px;
+    }
+    @media only screen and (max-width: 1500px) {
+      width: 1180px;
+    }
+    @media only screen and (max-width: 1400px) {
+      width: 1080px;
+    }
+    @media only screen and (max-width: 1200px) {
+      width: 980px;
+    }
+    .widget {
+      height: 350px;
+       
+      background-color: #fff;
+      border-radius: 5px;
+      margin: 10px;
+      box-shadow: 5px 5px 5px #939393;
+      &.left {
+        width: 890px;
+        @media only screen and (max-width: 1600px) {
+          width: 790px;
+        }
+        @media only screen and (max-width: 1500px) {
+          width: 690px;
+        }
+        @media only screen and (max-width: 1400px) {
+          width: 590px;
+        }
+        @media only screen and (max-width: 1200px) {
+          width: 490px;
+        }
+      }
+      &.right {
+        width: 450px;
+      }
+    }
+  }
+  .bottom-section {
+    display: flex;
+    
+    justify-content: space-between;
+    display:flex;
+    left:100px;
+     
+        .widget {
+      height: 250px;
+      background-color: #fff;
+      border-radius: 5px;
+      margin: 10px;
+      box-shadow: 5px 5px 5px #939393;
+      &.left {
+        width: 670px;
+        @media only screen and (max-width: 1200px) {
+          width: 570px;
+        }
+      }
+      &.right {
+        width: 670px;
+        @media only screen and (max-width: 1600px) {
+          width: 570px;
+        }
+        @media only screen and (max-width: 1500px) {
+          width: 470px;
+        }
+        @media only screen and (max-width: 1400px) {
+          width: 370px;
+        }
+        @media only screen and (max-width: 1200px) {
+          width: 370px;
+        }
+      }
+    }
+  }
+ .main-container{
+  margin-left:130px;
+  
+ }
+  
+
+
+
+ .widget-container {
+  display: flex;
+  align-items: space-between;
+  margin-right:10px;
+  .widget {
+    width: 325px;
+    height: 175px;
+  
+    background-color: #fff;
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #939393;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+   
+    &.green {
+      background-color: rgb(4, 67, 66);
+     
+    }
+    &.yellow {
+      background-color: rgb(237, 158, 32);
+    }
+    &.red {
+      background-color: rgb(126, 5, 5);
+    }
+    &.blue {
+      background-color: rgb(105, 32, 251);
+    }
+    @media only screen and (max-width: 1600px) {
+      width: 300px;
+    }
+    @media only screen and (max-width: 1500px) {
+      width: 275px;
+    }
+    @media only screen and (max-width: 1400px) {
+      width: 250px;
+    }
+    @media only screen and (max-width: 1200px) {
+      width: 225px;
+    }
+
+    .icon {
+      width: 100px;
+      font-size: 60px;
+      text-align: center;
+      @media only screen and (max-width: 1200px) {
+        font-size: 45px;
+      }
+    }
+    .value {
+      text-align: center;
+      width: 175px;
+      .top {
+        font-size: 30px;
+        @media only screen and (max-width: 1200px) {
+          font-size: 26px;
+        }
+      }
+      .bottom {
+        font-size: 20px;
+        margin-top: 10px;
+        @media only screen and (max-width: 1200px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.nav-items {
+  width: 200px;
+  background-color: #333; /* Sidebar background color */
+  height: 100vh;
+  padding-top: 20px; /* Adjust the top padding as needed */
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.mat-icon {
+  margin-bottom: 5px;
+}
+
+/* Optional: Add hover effect */
+.nav-item:hover {
+  background-color: #555; /* Adjust the hover background color as needed */
+  cursor: pointer;
+}
+.title{
+  margin-top :10px;
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
+   /* Choose your preferred background color */
+  color: #0b0b0b; /* Choose your preferred text color */
+  padding: 10px;
+  border-radius: 5px;
+}

@@ -1,0 +1,120 @@
+<div class="nav-items">
+  <div class="container">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Cost assurance</th>
+          <th>Date d'assurance</th>
+          <th>Type</th>
+          <th>buyer username</th>
+        </tr>
+      </thead>
+      <tbody>
+         
+            
+        <ng-container *ngFor="let user of myContratDetails">
+          <ng-container *ngIf="user.seller?.username != receivedData">
+            <tr>
+              <td>{{ user.cost }}</td>
+              <td>{{ user.date }}</td>
+              <ng-container *ngIf="user.hasCar; ">
+                <td>Car</td>
+            </ng-container>
+            
+            <ng-container *ngIf="user.hasTravel; ">
+                <td>Travel</td>
+            </ng-container>
+            
+            <ng-container *ngIf="user.hasStage; ">
+                <td>Stage</td>
+            </ng-container>
+  
+              <td>{{ user.buyer?.username }}</td>
+              <td>
+                <button (click)="toggleForm(user.seller.username)">add rec</button>
+              </td>
+              
+            </tr>
+            <div *ngIf="showForm">
+      
+              <div class="container mt-4" >
+                <div class="card">
+                    <h1>Add reclamation</h1>
+                    <form>
+                      <div class="form-group">
+                       
+                        <label>Date</label>
+                    
+                        <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control" id="name" placeholder="Enter Name">
+                    
+                      </div>
+                    
+                      <div class="form-group">
+                          <label>Description</label>
+                          <input type="text" [(ngModel)]="address" [ngModelOptions]="{standalone: true}" class="form-control" id="address" placeholder="Enter address">
+                    
+                        </div>
+                    
+                        <div class="form-group">
+                          <label>email</label>
+                          <input type="text" [(ngModel)]="mobile" [ngModelOptions]="{standalone: true}" class="form-control" id="mobile" placeholder="Enter Mobile">
+                    
+                        </div>
+                     
+                    
+                      <button type="submit" class="btn btn-primary mt-4" (click)="save()" >Submit</button>
+                    </form>
+            </div>
+            </div>
+
+
+
+
+
+
+
+

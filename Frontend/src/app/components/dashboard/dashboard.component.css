@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+ 
+
+
+
+  .contract-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .contract-card {
+    flex: 0 0 calc(33.3333% - 20px); /* Three cards in a row with spacing */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .contract-card:hover {
+    transform: scale(1.05);
+  }
+  #l {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .details-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  .details-value {
+    margin-bottom: 10px;
+    color: #666;
+  }
+
+
+.h {
+  display: flex;
+    margin-left: 150px;
+    /* Add any other styles for your button */
+}
+
+  .contract-card button {
+    /* Button styles */
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .contract-card button:hover {
+    /* Hover effect */
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+
+
+
+.get{
+  margin-left:50px;
+  background-color:gray;
+}
+  
+

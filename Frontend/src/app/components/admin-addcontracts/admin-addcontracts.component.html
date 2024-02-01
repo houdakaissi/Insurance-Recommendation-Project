@@ -1,0 +1,196 @@
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="nav-items"  > 
+
+
+<div class="nav-item"  routerLink="/admin">
+  <mat-icon>stop</mat-icon>
+ 
+  <span>Main page</span>
+  
+</div>
+<div class="nav-items"  >
+    <div class="nav-item"  routerLink="/admin_listcontrats">
+      <mat-icon>dashboard</mat-icon>
+     
+      <span>List Contracts</span>
+      
+    </div>
+    <div class="nav-item" routerLink="/admin_addcontrats">
+      <mat-icon>inbox</mat-icon>
+      <span>Add Contracts</span>
+    </div>
+    <div class="nav-item" routerLink="/admin_listcomplains">
+      <mat-icon>attach_money</mat-icon>
+      <span>List Complains</span>
+    </div>
+  
+    
+  </div>
+   </div>   
+
+  <div class="add">
+
+
+    
+    
+    <div class="container mt-4" >
+        <div class="card">
+            <h2> Add new contract      </h2> 
+            <h1>Add new    contrat........e........................................ </h1>
+    <form>
+
+      
+    
+    
+          <div class="form-group">
+            <label>Cost of contract</label>
+            <input type="text" [(ngModel)]="cost" [ngModelOptions]="{standalone: true}" class="form-control" id="mobile" >
+      
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input type="text" [(ngModel)]="date" [ngModelOptions]="{standalone: true}" class="form-control" id="mobile" >
+      
+          </div>
+        
+          <div class="form-group">
+            <label>Description</label>
+            <input type="text" [(ngModel)]="contractDescription" [ngModelOptions]="{standalone: true}" class="form-control" id="mobile" >
+      
+          </div>
+
+     
+          
+
+    
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+     
+        
+      
+      
+          <div class="form-group">
+            <label for="hasCar">Do you have a car?</label>
+            <div class="form-check">
+                <input [(ngModel)]="hasCar" type="radio" class="form-check-input" name="hasCar" value="yes" [value]="true" id="yesCar" (change)="onHasCarChange($event)">
+                <label class="form-check-label" for="yesCar">Yes</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" [(ngModel)]="hasCar" class="form-check-input" name="hasCar" value="no" [value]="false" id="noCar" (change)="onHasCarChange($event)">
+                <label class="form-check-label" for="noCar">No</label>
+            </div>
+          </div>
+          
+          <div *ngIf="showCarDetails" class="mt-3">
+            <div class="form-group">
+              <label for="meliage">Mileage</label>
+              <input [(ngModel)]="mileage" type="text" class="form-control" name="mileage" id="mileage">
+            </div>
+          
+            <div class="form-group">
+              <label for="age">Age:</label>
+              <input [(ngModel)]="age" type="text" class="form-control" name="age" id="age">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="hasStage">Do you have a stage?</label>
+            <div class="form-check">
+                <input [(ngModel)]="hasStage" type="radio" class="form-check-input" name="hasStage" [value]="true" value="yes" id="yesStage" (change)="onHasStageChange($event)">
+                <label class="form-check-label" for="yesStage">Yes</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" [(ngModel)]="hasStage" class="form-check-input" name="hasStage" [value]="false" value="no" id="noStage" (change)="onHasStageChange($event)">
+                <label class="form-check-label" for="noStage">No</label>
+            </div>
+          </div>
+          
+          <div *ngIf="showStageDetails" class="mt-3">
+            <div class="form-group">
+              <label for="duration">Duration</label>
+              <input type="text" class="form-control" [(ngModel)]="duration" name="duration" id="duration">
+            </div>
+          
+            <div class="form-group">
+              <label for="startranchise">Start Franchise:</label>
+              <input [(ngModel)]="startFranchise" type="text" class="form-control" name="startFranchise" id="startFranchise">
+            </div>
+          
+            <div class="form-group">
+              <label for="endranchise">End Franchise:</label>
+              <input [(ngModel)]="endFranchise" type="text" class="form-control" name="endFranchise" id="endFranchise">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="hastravel">Do you want to travel?</label>
+            <div class="form-check">
+                <input [(ngModel)]="hasTravel" type="radio" class="form-check-input" name="hastravel" [value]="true" value="yes" id="yesTravel" (change)="onHasTravelChange($event)">
+                <label class="form-check-label" for="yesTravel">Yes</label>
+            </div>
+            <div class="form-check">
+                <input [(ngModel)]="hasTravel" type="radio" class="form-check-input" name="hastravel" [value]="false" value="no" id="noTravel" (change)="onHasTravelChange($event)">
+                <label class="form-check-label" for="noTravel">No</label>
+            </div>
+          </div>
+          
+          <div *ngIf="showTravelDetails"   class="mt-3">
+            <div class="form-group">
+              <label for="duration">Duration</label>
+              <input [(ngModel)]="duration" type="text" class="form-control" name="duration" id="duration">
+            </div>
+          
+            <div class="form-group">
+              <label for="startFranchise">Start Franchise:</label>
+              <input [(ngModel)]="startFranchise" type="text" class="form-control" name="startFranchise" id="startFranchise">
+            </div>
+            
+            <div class="form-group">
+              <label for="endFranchise">End Franchise:</label>
+              <input [(ngModel)]="endFranchise" type="text" class="form-control" name="endFranchise" id="endFranchise">
+            </div>
+            
+          
+            <div class="form-group">
+              <label for="destination">Destination</label>
+              <input [(ngModel)]="destination" type="text" class="form-control" name="destination" id="destination">
+            </div>
+          </div>
+          
+            <button type="submit" class="btn btn-primary mt-4" (click)="save()" >Submit</button>
+          </form>
+       </div>
