@@ -1,0 +1,35 @@
+apiVersion: kubeflow.org/v1beta1
+kind: Experiment
+metadata:
+  name: ml_deployment_pipeline
+spec:
+  components:
+  - name: car
+    implementation:
+      container:
+        image: essalhisara111/recomsys:car
+    arguments:
+    - name: service_name
+      value: car_model
+    - name: service_port
+      value: "5000"
+
+  - name: internship
+    implementation:
+      container:
+        image: essalhisara111/recomsys:internship
+    arguments:
+    - name: service_name
+      value: internship_model
+    - name: service_port
+      value: "5000"
+
+  - name: travel
+    implementation:
+      container:
+        image: essalhisara111/recomsys:travel
+    arguments:
+    - name: service_name
+      value: travel_model
+    - name: service_port
+      value: "5000"

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: travel-model-deployment
+spec:
+  selector:
+    matchLabels:
+      app: travel-model
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: travel-model
+    spec:
+      containers:
+        - name: travel-model
+          image: essalhisara111/recommendation:travel_ml
+          ports:
+            - containerPort: 5002
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: travel-model
+  name: travel-model-svc
+spec:
+  selector:
+    app: travel-model
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 5002
+      targetPort: 5002
+status:
+  loadBalancer: {}

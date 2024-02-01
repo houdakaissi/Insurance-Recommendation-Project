@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: car-ml-deployment
+spec:
+  selector:
+    matchLabels:
+      app: car-ml
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: car-ml
+    spec:
+      containers:
+        - name: car-ml
+          image: essalhisara111/recommendation:car_ml
+          ports:
+            - containerPort: 5001
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: car-ml
+  name: car-ml-svc
+spec:
+  selector:
+    app: car-ml
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 5001
+      targetPort: 5001
+status:
+  loadBalancer: {}
